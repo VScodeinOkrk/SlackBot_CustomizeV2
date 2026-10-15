@@ -1,0 +1,24 @@
+{
+  "name": "hubot-slack-community",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --env-file=.env src/index.js",
+    "test": "node --test",
+    "check:messages": "node --input-type=module -e \"import('./src/messages.js').then(() => console.log('メッセージ設定は正常です'))\"",
+    "start:render": "node src/index.js",
+    "import:gas": "node --env-file=.env deploy/import-state.mjs"
+  },
+  "dependencies": {
+    "@slack/rtm-api": "^7.0.4",
+    "@slack/socket-mode": "^3.1.0",
+    "@slack/web-api": "^8.2.0",
+    "hubot": "^14.1.0",
+    "yaml": "^2.9.1"
+  },
+  "description": "Hubot with a Slack Socket Mode adapter and community scripts"
+}

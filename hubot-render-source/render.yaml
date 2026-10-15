@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: hubot-slack
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /healthz
+    envVars:
+      - key: HUBOT_SLACK_MODE
+        value: rtm
+      - key: HUBOT_NAME
+        value: hubot
+      - key: TIME_ZONE
+        value: Asia/Tokyo
+      - key: WAKE_TIME
+        value: '07:00'
+      - key: HUBOT_SLACK_BOT_TOKEN
+        sync: false
+      - key: ALLOWED_CHANNEL_IDS
+        sync: false
+      - key: BOT_ADMIN_USER_IDS
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: YOUTUBE_PLAYLIST_ID
+        sync: false
+      - key: GAS_STATE_URL
+        sync: false
+      - key: GAS_STATE_SECRET
+        sync: false
