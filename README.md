@@ -1,0 +1,2 @@
+# SlackBot_CustomizeV2
+Codexを用いて使用した、Hubotのプログラムです
